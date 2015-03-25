@@ -36,7 +36,7 @@ def install(progress=None):
     if status.state == UpdaterStatus.INSTALLING_UPDATES:
         msg = 'The install is already running'
         logger.warn(msg)
-        progress.abort(_(msg))
+        progress.abort(_('The install is already running'))
         return False
     elif status.state != UpdaterStatus.UPDATES_DOWNLOADED:
         logger.debug('Updates weren\'t downloaded, running download first.')
@@ -121,7 +121,7 @@ def do_install(progress, status):
         ),
         Phase(
             'aux-tasks',
-            'Performing auxiliary tasks',
+            _('Performing auxiliary tasks'),
             10,
             is_main=True
         )
@@ -221,7 +221,7 @@ def install_pip_packages(progress):
     progress.init_steps(phase_name, len(packages))
 
     for pkg in packages:
-        progress.next_step(phase_name, "Installing {}".format(pkg))
+        progress.next_step(phase_name, _("Installing {}").format(pkg))
 
         success = run_pip_command("install --upgrade {}".format(pkg))
 

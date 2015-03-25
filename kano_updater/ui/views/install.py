@@ -105,4 +105,4 @@ class Install(Gtk.Overlay):
 
         self._progress_subphase.set_text(sub_msg)
         self._percent_display.set_text(
-            "Time flies - {}% already!".format(percent))
+            _("Time flies - {}% already!").format(percent))

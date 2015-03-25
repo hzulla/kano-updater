@@ -85,7 +85,7 @@ def run_install(gui=False, confirm=True, splash_pid=None):
 
 def main():
     msg = _('Administrator priviledges are required to perform this operation')
-    enforce_root("{}: {}".format(_('ERROR'), msg))
+    enforce_root("{}: {}".format(_('Error').upper(), msg))
 
     atexit.register(clean_up)
 
@@ -102,7 +102,7 @@ def main():
     if not args['relaunch-splash'] and is_running():
         msg = _('An instance of Kano Updater is already running')
         logger.error(msg)
-        sys.stderr.write("{}: {}\n".format(_('ERROR'), msg))
+        sys.stderr.write("{}: {}\n".format(_('Error').upper(), msg))
         sys.exit(1)
 
     if args['set-state']:

@@ -110,8 +110,8 @@ class AptWrapper(object):
         download = "{}-downloading".format(phase_name)
         install = "{}-installing".format(phase_name)
         progress.split(
-            Phase(download, "Downloading packages"),
-            Phase(install, "Installing packages")
+            Phase(download, _("Downloading packages")),
+            Phase(install, _("Installing packages"))
         )
 
         progress.start(download)
@@ -136,8 +136,8 @@ class AptWrapper(object):
         download = "{}-downloading".format(phase_name)
         install = "{}-installing".format(phase_name)
         progress.split(
-            Phase(download, "Downloading packages"),
-            Phase(install, "Installing packages")
+            Phase(download, _("Downloading packages")),
+            Phase(install, _("Installing packages"))
         )
 
         progress.start(download)

@@ -104,19 +104,19 @@ def do_download(progress, status):
     progress.split(
         Phase(
             'downloading-pip-pkgs',
-            'Downloading Python packages',
+            _('Downloading Python packages'),
             10,
             is_main=True
         ),
         Phase(
             'updating-sources',
-            'Updating apt sources',
+            _('Updating apt sources'),
             40,
             is_main=True
         ),
         Phase(
             'downloading-apt-packages',
-            'Downloading apt packages',
+            _('Downloading apt packages'),
             50,
             is_main=True
         )
@@ -143,7 +143,7 @@ def _cache_pip_packages(progress):
     progress.init_steps(phase_name, len(packages))
 
     for pkg in packages:
-        progress.next_step(phase_name, "Downloading {}".format(pkg))
+        progress.next_step(phase_name, _("Downloading {}").format(pkg))
 
         # The `--no-install` parameter has been deprecated in pip. However, the
         # version of pip in wheezy doesn't yet support the new approach which

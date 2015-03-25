@@ -69,8 +69,8 @@ def launch_boot_gui():
     old_status = clean()
     if old_status == UpdaterStatus.UPDATES_INSTALLED:
         # TODO: Implement the updater dialog properly
-        title = 'Kano OS was updated'
-        text = 'The update completed successfully. Enjoy the new version!'
+        title = _('Kano OS was updated')
+        text = _('The update completed successfully. Enjoy the new version!')
         run_cmd("kano-dialog title=\"{}\" description=\"{}\"".format(title,
                                                                      text))
 
