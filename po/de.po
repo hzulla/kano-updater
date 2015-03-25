@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kano-updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-23 14:02+0100\n"
+"POT-Creation-Date: 2015-03-25 17:55+0100\n"
 "PO-Revision-Date: 2015-02-13 17:16+0100\n"
 "Last-Translator:  <kontakt@hanno.de>\n"
 "Language-Team: German <kontakt@hanno.de>\n"
@@ -18,31 +18,170 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../bin/check-for-updates:46
-msgid "New Update"
-msgstr "Neues Update"
+#: ../bin/kano-updater:87
+msgid "Administrator priviledges are required to perform this operation"
+msgstr "Für diese Aufgabe sind Administrator-Rechte nötig"
 
-#: ../bin/check-for-updates:64
-msgid "Time to update!"
-msgstr "Zeit für ein Update!"
+#: ../bin/kano-updater:88 ../bin/kano-updater:105
+msgid "Error"
+msgstr "Fehler"
 
-#: ../bin/check-for-updates:64
-msgid "Take a break! Updating takes about 15 minutes"
-msgstr "Mach mal Pause! Das Update dauert etwa 15 Minuten"
+#: ../bin/kano-updater:103
+msgid "An instance of Kano Updater is already running"
+msgstr "Kano Updater wird bereits ausgeführt"
 
-#: ../bin/check-for-updates:67 ../bin/kano-updater:111
-msgid "Update now"
-msgstr "Jetzt updaten"
+#: ../kano_updater/apt_wrapper.py:47 ../kano_updater/commands/download.py:113
+msgid "Updating apt sources"
+msgstr "Hole aktuelle Paketlisten"
 
-#: ../bin/check-for-updates:69 ../bin/kano-updater:112
-msgid "Later"
-msgstr "Später"
+#: ../kano_updater/apt_wrapper.py:48
+msgid "Initialising apt cache"
+msgstr "Bereite Paket-Cache vor"
 
-#: ../bin/kano-updater:70
-msgid "You need to run kano-updater from a GUI session!"
-msgstr "Du musst kano-updater aus der GUI heraus starten!"
+#: ../kano_updater/apt_wrapper.py:57
+msgid "Reading package lists"
+msgstr "Lese Paketliste"
 
-#: ../bin/kano-updater:93
+#: ../kano_updater/apt_wrapper.py:57
+msgid "Building dependency tree"
+msgstr "Prüfe Abhängigkeiten zwischen Paketen"
+
+#: ../kano_updater/apt_wrapper.py:58
+msgid "Reading state information"
+msgstr "Lese Status-Informationen"
+
+#: ../kano_updater/apt_wrapper.py:58
+msgid "Building data structures"
+msgstr "Bereite Datenstrukturen vor"
+
+#: ../kano_updater/apt_wrapper.py:113 ../kano_updater/apt_wrapper.py:139
+msgid "Downloading packages"
+msgstr "Hole Pakete"
+
+#: ../kano_updater/apt_wrapper.py:114 ../kano_updater/apt_wrapper.py:140
+msgid "Installing packages"
+msgstr "Installiere Pakete"
+
+#: ../kano_updater/apt_wrapper.py:178
+msgid "Cleaning dpkg journal"
+msgstr "Lösche das Journal von dpkg"
+
+#: ../kano_updater/apt_wrapper.py:180
+msgid "Fixing broken packages"
+msgstr "Repariere kaputte Pakete"
+
+#: ../kano_updater/auxiliary_tasks.py:18
+msgid "Updating home folders from template"
+msgstr "Update der Home-Verzeichnisse"
+
+#: ../kano_updater/auxiliary_tasks.py:20
+msgid "Refreshing the desktop"
+msgstr "Bringe Desktop auf den neuesten Stand"
+
+#: ../kano_updater/auxiliary_tasks.py:22
+msgid "Expanding filesystem partitions"
+msgstr "Vergrößere Dateisysteme auf den Partitionen"
+
+#: ../kano_updater/commands/check.py:34
+msgid "No need to check for updates"
+msgstr "Keine Update-Prüfung notwendig"
+
+#: ../kano_updater/commands/check.py:50
+msgid "Time check passed, doing update check!"
+msgstr "Genügend Zeit vergangen, Update-Prüfung!"
+
+#: ../kano_updater/commands/check.py:52
+msgid "Not enough time passed for a new update check!"
+msgstr "Noch nicht ausreichend Zeit vergangen für eine Update-Prüfung!"
+
+#: ../kano_updater/commands/check.py:58
+msgid "Must have internet to check for updates"
+msgstr "Für eine Update-Prüfung ist eine Internetverbindung notwendig"
+
+#: ../kano_updater/commands/check.py:64
+#: ../kano_updater/commands/download.py:78
+msgid "Could not connect to the download server"
+msgstr "Keine Verbindung zum Download-Server"
+
+#: ../kano_updater/commands/download.py:34
+msgid "Checking for updates"
+msgstr "Suche nach neuen Updates"
+
+#: ../kano_updater/commands/download.py:40
+#: ../kano_updater/commands/install.py:46
+msgid "Downloading updates"
+msgstr "Hole Updates"
+
+#: ../kano_updater/commands/download.py:48
+#: ../kano_updater/ui/install_window.py:121
+msgid "No updates to download"
+msgstr "Keine Updates zu holen"
+
+#: ../kano_updater/commands/download.py:54
+msgid "Updates have been downloaded already"
+msgstr "Alle Updates sind bereits heruntergeladen"
+
+#: ../kano_updater/commands/download.py:60
+msgid "The download is already running"
+msgstr "Der Download läuft bereits"
+
+#: ../kano_updater/commands/download.py:66
+msgid "Updates are already being installed"
+msgstr "Updates werden bereits installiert"
+
+#: ../kano_updater/commands/download.py:72
+msgid "Must have internet to download the updates"
+msgstr "Für den Download der Updates ist eine Internetverbindung notwendig"
+
+#: ../kano_updater/commands/download.py:107
+msgid "Downloading Python packages"
+msgstr "Hole Python-Pakete"
+
+#: ../kano_updater/commands/download.py:119
+msgid "Downloading apt packages"
+msgstr "Hole apt-Pakete"
+
+#: ../kano_updater/commands/download.py:146
+msgid "Downloading {}"
+msgstr "Hole {]"
+
+#: ../kano_updater/commands/install.py:39
+msgid "The install is already running"
+msgstr "Die Installation läuft bereits"
+
+#: ../kano_updater/commands/install.py:52
+msgid "Installing updates"
+msgstr "Installiere Updates"
+
+#: ../kano_updater/commands/install.py:88
+msgid "Starting Update"
+msgstr "Starte Update"
+
+#: ../kano_updater/commands/install.py:94
+msgid "Updating Itself"
+msgstr "Update mich selbst"
+
+#: ../kano_updater/commands/install.py:100
+msgid "Running The Preupdate Scripts"
+msgstr "Führe die vorbereitenden Skripte aus"
+
+#: ../kano_updater/commands/install.py:106
+msgid "Updating Pip Packages"
+msgstr "Update Pip-Pakete"
+
+#: ../kano_updater/commands/install.py:112
+msgid "Updating Deb Packages"
+msgstr "Update Deb-Pakete"
+
+#: ../kano_updater/commands/install.py:118
+msgid "Running The Postupdate Scripts"
+msgstr "Führe die abschließenden Skripte aus"
+
+#: ../kano_updater/commands/install.py:124
+msgid "Performing auxiliary tasks"
+msgstr "Erledige noch dies und das"
+
+#: ../kano_updater/commands/install.py:145
 msgid ""
 "Unfortunately, your version of Kano OS is too old to be updated through the "
 "updater."
@@ -50,133 +189,102 @@ msgstr ""
 "Leider ist Dein Kano OS zu alt, um es mit dem Updater auf den neuesten Stand "
 "zu bringen."
 
-#: ../bin/kano-updater:95
+#: ../kano_updater/commands/install.py:147
 msgid "You will need to download the image of the OS and reflash your SD card."
 msgstr ""
 "Bitte lade das neueste Image von Kano OS herunter und installiere es mit "
 "einer SD-Karte."
 
-#: ../bin/kano-updater:99 ../bin/kano-updater:115 ../bin/kano-updater:197
-#: ../bin/kano-updater:212 ../lxpanel-plugin/kano_updater.c:33
-#: ../lxpanel-plugin/kano_updater.c:243 ../lxpanel-plugin/kano_updater.c:338
-msgid "Kano Updater"
-msgstr "Kano Updater"
+#: ../kano_updater/commands/install.py:169
+msgid "The updater has been updated, relaunching."
+msgstr "Das Update des Updaters ist fertig, starte neu."
 
-#: ../bin/kano-updater:109
-msgid "Let's update!"
-msgstr "Ein Update!"
+#: ../kano_updater/commands/install.py:179
+msgid "The pre-update tasks failed."
+msgstr "Die vorbereitenden Aufgaben klappten nicht."
 
-#: ../bin/kano-updater:110
-msgid "Your Kano is about to get better"
-msgstr "Dein Kano wird jetzt verbessert"
+#: ../kano_updater/commands/install.py:196
+msgid "The post-update tasks failed."
+msgstr "Die abschließenden Aufgaben klappten nicht."
 
-#: ../bin/kano-updater:195 ../kano_updater/utils.py:328
-msgid "Error!"
-msgstr "Fehler!"
+#: ../kano_updater/commands/install.py:224
+msgid "Installing {}"
+msgstr "Installiere {}"
 
-#: ../bin/kano-updater:195
-msgid "Internet connection lost!"
-msgstr "Keine Internet-Verbindung!"
+#: ../kano_updater/ui/available_window.py:64
+msgid "Later"
+msgstr "Später"
 
-#: ../bin/kano-updater:210
-msgid "Error with downloading packages!"
-msgstr "Konnte Pakete nicht herunterladen!"
+#: ../kano_updater/ui/available_window.py:88
+msgid "The action needs to be implemented"
+msgstr "Diese Aktion ist noch nicht implementiert"
 
-#: ../bin/kano-updater-gui:97
+#: ../kano_updater/ui/available_window.py:96
+#: ../kano_updater/ui/available_window.py:118
+msgid "New Update"
+msgstr "Neues Update"
+
+#: ../kano_updater/ui/available_window.py:97
+msgid "Get new powers"
+msgstr "Neue Superkräfte"
+
+#: ../kano_updater/ui/available_window.py:98
+msgid "Download the latest Kano OS"
+msgstr "Hole das neueste Kano OS"
+
+#: ../kano_updater/ui/available_window.py:99
+msgid "Download"
+msgstr "Download"
+
+#: ../kano_updater/ui/available_window.py:119
+msgid "Almost there..."
+msgstr "Fast fertig..."
+
+#: ../kano_updater/ui/available_window.py:120
+msgid ""
+"Downloaded and ready to go! In a matter\n"
+"of minutes your Kano will be fresher than ever"
+msgstr ""
+"Download fertig, jetzt geht's los! In ein paar\n"
+"Minuten ist Dein Kano auf dem neuesten Stand"
+
+#: ../kano_updater/ui/available_window.py:122
+msgid "Install"
+msgstr "Installieren"
+
+#: ../kano_updater/ui/install_window.py:37
 msgid "Updater"
 msgstr "Updater"
 
-#: ../kano_updater/utils.py:65
-msgid ""
-"We had a problem with the Update. Make sure you are connected to the "
-"Internet, and give it another go.\n"
-"\n"
-"If you still have problems, we can help at http://help.kano.me"
-msgstr ""
-"Beim Update gab es ein Problem. Bitte prüfe die Internet-Verbindung und "
-"versuche es noch einmal.\n"
-"\n"
-"Falls Du nicht weiterkommst, können wir Dir bei http://help.kano.me helfen."
+#: ../kano_updater/ui/install_window.py:68
+msgid "The install unexpectantly quit"
+msgstr "Die Installation ist unerwartet abgebrochen"
 
-#: ../kano_updater/utils.py:69
-msgid "Update error"
-msgstr "Update-Fehler"
+#: ../kano_updater/ui/install_window.py:69
+msgid "Please try again later"
+msgstr "Versuch's bitte später noch einmal"
 
-#: ../kano_updater/utils.py:329
-msgid "kano-updater must be executed with root privileges"
-msgstr "kano-updater benötigt Root-Rechte"
+#: ../kano_updater/ui/install_window.py:99
+msgid "No updates available"
+msgstr "Keine Updates vorhanden"
 
-#: ../kano_updater_gui/text.py:12
-msgid "1. Downloading…"
-msgstr "1. Vorbereitung…"
+#: ../kano_updater/ui/install_window.py:100
+msgid "Your system is already up to date"
+msgstr "Dein System ist bereits auf dem neuesten Stand"
 
-#: ../kano_updater_gui/text.py:13
-msgid ""
-"2. Updating\n"
-"the updater…"
-msgstr ""
-"2. Updates für\n"
-"den Updater…"
+#: ../kano_updater/ui/install_window.py:119
+msgid "Update completed"
+msgstr "Update abgeschlossen"
 
-#: ../kano_updater_gui/text.py:14
-msgid ""
-"3. Upgrading\n"
-"Python…"
-msgstr ""
-"3. Updates für\n"
-"Python…"
+#: ../kano_updater/ui/install_window.py:126
+msgid "Error updating"
+msgstr "Fehler bei Update"
 
-#: ../kano_updater_gui/text.py:15
-msgid ""
-"4. Optimizing\n"
-"your Kano…"
-msgstr ""
-"4. Verbesserungen\n"
-"für Deinen Kano…"
+#: ../kano_updater/ui/relaunch_window.py:30
+msgid "Updater Splash"
+msgstr "Updater Info"
 
-#: ../kano_updater_gui/text.py:16
-msgid ""
-"5. Upgrading\n"
-"your system…"
-msgstr ""
-"5. Updates für\n"
-"Dein System…"
-
-#: ../kano_updater_gui/text.py:17
-msgid ""
-"6. Finishing\n"
-"up…"
-msgstr "6. Aufräumen…"
-
-#: ../kano_updater_gui/text.py:23
-msgid "Downloading…"
-msgstr "Vorbereitung…"
-
-#: ../kano_updater_gui/text.py:24
-msgid "Updating the updater…"
-msgstr "Updates für den Updater…"
-
-#: ../kano_updater_gui/text.py:25
-msgid "Upgrading Python…"
-msgstr "Updates für Python…"
-
-#: ../kano_updater_gui/text.py:26
-msgid "Optimizing your Kano…"
-msgstr "Verbesserungen für Deinen Kano…"
-
-#: ../kano_updater_gui/text.py:27
-msgid "Upgrading your Operating System…"
-msgstr "Updates für Dein Betriebssystem…"
-
-#: ../kano_updater_gui/text.py:28
-msgid "Finishing up…"
-msgstr "Aufräumen…"
-
-#: ../kano_updater_gui/text.py:29
-msgid "System updated!"
-msgstr "System auf neuestem Stand!"
-
-#: ../kano_updater_gui/text.py:33
+#: ../kano_updater/ui/stage_text.py:32
 msgid ""
 "In 1978, the fastest computer in the world was the Cray 1 — it cost $7 "
 "million and weighed as much as an average elephant! Your Kano is about 4 "
@@ -196,7 +304,7 @@ msgstr ""
 "es mit der Welt. Oder komm zu <b>http://world.kano.me</b> und suche das "
 "weiße Kaninchen."
 
-#: ../kano_updater_gui/text.py:45
+#: ../kano_updater/ui/stage_text.py:44
 msgid ""
 "Computers can learn new ideas quickly. Right now, we're updating the Updater "
 "tool. Once this step is finished, the Updater will relaunch. How do "
@@ -217,7 +325,7 @@ msgstr ""
 "und es sind über 10 Million drin. Die Schalter in Deinem Gehirn sind Zellen "
 "und heißen Neuronen. Jetzt gerade reden sie miteinander."
 
-#: ../kano_updater_gui/text.py:58
+#: ../kano_updater/ui/stage_text.py:57
 msgid ""
 "Python is one of the world's most popular programming languages. A "
 "programming language takes words that humans can understand, and translates "
@@ -239,7 +347,7 @@ msgstr ""
 "Minecraft bauen, \"Gangnam Style\" von Youtube ziehen und Millionen US-"
 "Dollar an der New Yorker Börse bewegen."
 
-#: ../kano_updater_gui/text.py:72
+#: ../kano_updater/ui/stage_text.py:71
 msgid ""
 "The name \"Kano\" comes from Kanō Jigorō. He was a Japanese schoolteacher, "
 "inventor of the art of judo. His motto: Maximum efficiency, minimum effort. "
@@ -262,7 +370,7 @@ msgstr ""
 "<b>world.kano.me/projects</b>. Und auf <b>blog.kano.me</b> lernst Du die "
 "Leute hinter Kano kennen."
 
-#: ../kano_updater_gui/text.py:84
+#: ../kano_updater/ui/stage_text.py:83
 msgid ""
 "Kano OS is an operating system, which means it connects all the programs "
 "together. This OS is based on Linux, whose code is open — that means that "
@@ -281,7 +389,7 @@ msgstr ""
 "ISS die Robotersysteme steuert, damit die Astronauten ihr Essen nicht "
 "verlieren!"
 
-#: ../kano_updater_gui/text.py:95
+#: ../kano_updater/ui/stage_text.py:94
 msgid ""
 "We're almost done! With your Kano computer, you'll make awesome games, code "
 "your own music, stream videos around your house, tell stories, and much "
@@ -294,7 +402,7 @@ msgstr ""
 "steht Dir zur Verfügung. Wenn Du coole neue Projekte von uns kriegen willst, "
 "schau doch mal rein unter"
 
-#: ../kano_updater_gui/text.py:102
+#: ../kano_updater/ui/stage_text.py:101
 msgid ""
 "Your Kano will now reboot!\n"
 "\n"
@@ -304,26 +412,87 @@ msgstr ""
 "\n"
 "Bis gleich…"
 
-#: ../kano_updater_gui/header.py:113
-msgid "Do not disconnect your Kano"
-msgstr "Schalte Deinen Kano nicht ab"
+#: ../kano_updater/ui/views/install.py:108
+msgid "Time flies — {}% already!"
+msgstr "Es geht voran — {}% erledigt!"
 
-#: ../kano_updater_gui/header.py:115
-msgid "Please stand by"
-msgstr "Bitte warten"
+#: ../kano_updater/ui/views/relaunch.py:24
+msgid "Relaunching the Updater"
+msgstr "Neustart des Updaters"
 
-#: ../lxpanel-plugin/kano_updater.c:249
-msgid "Update your system"
-msgstr "Updates für Dein System"
+#: ../kano_updater/ui/views/relaunch.py:27
+msgid "The Updater updated itself and is now starting again."
+msgstr "Der Updater hat sich selbst aktualisiert und startet jetzt neu"
 
-#: ../lxpanel-plugin/kano_updater.c:255
+#: ../kano_updater/ui/views/restart.py:20
+msgid "Update complete!"
+msgstr "Update abgeschlossen!"
+
+#: ../kano_updater/ui/views/restart.py:23
+msgid ""
+"Your Kano is up to date and \n"
+"will automatically restart in 10 seconds"
+msgstr ""
+"Dein Kano ist auf dem neuesten Stand und\n"
+"wird in 10 Sekunden automatisch neu starten"
+
+#: ../kano_updater/ui/views/restart.py:28
+msgid "Press ENTER to restart now"
+msgstr "Drücke ENTER für sofortigen Neustart"
+
+#: ../kano_updater/utils.py:193
+msgid ""
+"We had a problem with the Update. Make sure you are connected to the "
+"Internet, and give it another go.\n"
+"\n"
+"If you still have problems, we can help at http://help.kano.me"
+msgstr ""
+"Beim Update gab es ein Problem. Bitte prüfe die Internet-Verbindung und "
+"versuche es noch einmal.\n"
+"\n"
+"Falls Du nicht weiterkommst, können wir Dir bei http://help.kano.me helfen."
+
+#: ../kano_updater/utils.py:197
+msgid "Update error"
+msgstr "Update-Fehler"
+
+#: ../kano_updater/utils.py:457
+msgid "Error!"
+msgstr "Fehler!"
+
+#: ../kano_updater/utils.py:458
+msgid "kano-updater must be executed with root privileges"
+msgstr "kano-updater benötigt Root-Rechte"
+
+#: ../lxpanel-plugin/kano_updater.c:50 ../lxpanel-plugin/kano_updater.c:391
+#: ../lxpanel-plugin/kano_updater.c:483
+msgid "Kano Updater"
+msgstr "Kano Updater"
+
+#: ../lxpanel-plugin/kano_updater.c:394
+msgid "Download updates"
+msgstr "Hole Updates"
+
+#: ../lxpanel-plugin/kano_updater.c:397
+msgid "Download in progress ..."
+msgstr "Download läuft..."
+
+#: ../lxpanel-plugin/kano_updater.c:400
+msgid "Install updates"
+msgstr "Installiere Updates"
+
+#: ../lxpanel-plugin/kano_updater.c:403
+msgid "Installation in progress ..."
+msgstr "Installation läuft..."
+
+#: ../lxpanel-plugin/kano_updater.c:406
 msgid "No updates found"
 msgstr "Keine Updates gefunden"
 
-#: ../lxpanel-plugin/kano_updater.c:260
+#: ../lxpanel-plugin/kano_updater.c:408
 msgid "Check again"
 msgstr "Nochmal prüfen"
 
-#: ../lxpanel-plugin/kano_updater.c:339
+#: ../lxpanel-plugin/kano_updater.c:484
 msgid "A reminder to keep your Kano OS up-to-date."
 msgstr "Hält Kano OS auf dem neuesten Stand."
