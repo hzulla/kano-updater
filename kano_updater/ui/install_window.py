@@ -67,12 +67,13 @@ class InstallWindow(Gtk.Window):
         unexpected_quit = KanoDialog(
             _('The install unexpectantly quit'),
             _('Please try again later'),
-            {
-                'OK': {
+            [
+                {
+                    'label': _("OK").upper(),
                     'return_value': True,
                     'color': 'red'
                 }
-            })
+            ])
         unexpected_quit.run()
 
         self.close_window()
@@ -98,12 +99,13 @@ class InstallWindow(Gtk.Window):
         no_updates = KanoDialog(
             _('No updates available'),
             _('Your system is already up to date'),
-            {
-                'OK': {
+            [
+                {
+                    'label': _("OK").upper(),
                     'return_value': True,
                     'color': 'green'
                 }
-            })
+            ])
         no_updates.run()
 
         self.close_window()
@@ -124,12 +126,13 @@ class InstallWindow(Gtk.Window):
     def error(self, msg):
         error = KanoDialog(
             _('Error updating'), msg,
-            {
-                'CLOSE': {
+            [
+                {
+                    'label': _("Close").upper(),
                     'return_value': True,
                     'color': 'red'
                 }
-            },
+            ],
             parent_window=self)
         error.run()
         # FIXME: This close doesn't work for some reason
