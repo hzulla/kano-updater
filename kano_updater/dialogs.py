@@ -34,7 +34,7 @@ def show_results(msg_upgraded, msg_added, msg_removed, debian_err_packages,
                                            widget=scrolled_window,
                                            global_style=True)
     result_dialog.dialog.set_icon_name("kano-updater")
-    result_dialog.dialog.set_title("Kano Updater")
+    result_dialog.dialog.set_title(_("Kano Updater"))
 
     if msg_upgraded:
         text = "\nApps upgraded:\n"
@@ -90,8 +90,8 @@ def show_results(msg_upgraded, msg_added, msg_removed, debian_err_packages,
 
 
 def show_reboot_dialog():
-    rd_title = "Update successful!"
-    rd_desc = "Now we just need to do a quick reboot. See you in a minute!"
+    rd_title = _("Update successful!")
+    rd_desc = _("Now we just need to do a quick reboot. See you in a minute!")
     reboot_dialog = kano_dialog.KanoDialog(rd_title, rd_desc)
 
     reboot_dialog.run()
