@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kano-updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-25 17:55+0100\n"
+"POT-Creation-Date: 2015-04-01 11:26+0200\n"
 "PO-Revision-Date: 2015-02-13 17:16+0100\n"
 "Last-Translator:  <kontakt@hanno.de>\n"
 "Language-Team: German <kontakt@hanno.de>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../bin/kano-updater:87
+#: ../bin/kano-updater:90
 msgid "Administrator priviledges are required to perform this operation"
 msgstr "Für diese Aufgabe sind Administrator-Rechte nötig"
 
-#: ../bin/kano-updater:88 ../bin/kano-updater:105
+#: ../bin/kano-updater:91 ../bin/kano-updater:108
 msgid "Error"
 msgstr "Fehler"
 
-#: ../bin/kano-updater:103
+#: ../bin/kano-updater:106
 msgid "An instance of Kano Updater is already running"
 msgstr "Kano Updater wird bereits ausgeführt"
 
@@ -141,11 +141,15 @@ msgstr "Hole Python-Pakete"
 msgid "Downloading apt packages"
 msgstr "Hole apt-Pakete"
 
+#: ../kano_updater/commands/download.py:128
+msgid "Done downloading"
+msgstr "Downloads beendet"
+
 #: ../kano_updater/commands/download.py:146
 msgid "Downloading {}"
 msgstr "Hole {]"
 
-#: ../kano_updater/commands/install.py:39
+#: ../kano_updater/commands/install.py:37
 msgid "The install is already running"
 msgstr "Die Installation läuft bereits"
 
