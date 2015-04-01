@@ -46,6 +46,9 @@ from kano.logging import logger
 
 # FIXME Move into separate module
 gettext.install('kano-updater', locale_path, unicode=1)
+# N_() defined globally for deferred translation
+import __builtin__
+__builtin__.__dict__['N_'] = lambda msg: return msg
 
 from kano_updater.os_version import TARGET_VERSION
 from kano_updater.commands.download import download

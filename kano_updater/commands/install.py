@@ -34,9 +34,9 @@ def install(progress=None):
         progress = DummyProgress()
 
     if status.state == UpdaterStatus.INSTALLING_UPDATES:
-        msg = 'The install is already running'
+        msg = N_('The install is already running')
         logger.warn(msg)
-        progress.abort(_('The install is already running'))
+        progress.abort(_(msg))
         return False
     elif status.state != UpdaterStatus.UPDATES_DOWNLOADED:
         logger.debug('Updates weren\'t downloaded, running download first.')

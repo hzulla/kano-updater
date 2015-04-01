@@ -51,33 +51,33 @@ def download(progress=None):
         progress.start('downloading')
 
     elif status.state == UpdaterStatus.UPDATES_DOWNLOADED:
-        err_msg = _('Updates have been downloaded already')
+        err_msg = N_('Updates have been downloaded already')
         logger.error(err_msg)
-        progress.abort(err_msg)
+        progress.abort(_(err_msg))
         return True
 
     elif status.state == UpdaterStatus.DOWNLOADING_UPDATES:
-        err_msg = _('The download is already running')
+        err_msg = N_('The download is already running')
         logger.error(err_msg)
-        progress.abort(err_msg)
+        progress.abort(_(err_msg))
         return False
 
     elif status.state == UpdaterStatus.INSTALLING_UPDATES:
-        err_msg = _('Updates are already being installed')
+        err_msg = N_('Updates are already being installed')
         logger.error(err_msg)
-        progress.abort(err_msg)
+        progress.abort(_(err_msg))
         return False
 
     if not is_internet():
-        err_msg = _('Must have internet to download the updates')
+        err_msg = N_('Must have internet to download the updates')
         logger.error(err_msg)
-        progress.fail(err_msg)
+        progress.fail(_(err_msg))
         return False
 
     if not is_server_available():
-        err_msg = _('Could not connect to the download server')
+        err_msg = N_('Could not connect to the download server')
         logger.error(err_msg)
-        progress.fail(err_msg)
+        progress.fail(_(err_msg))
         return False
 
     status.state = UpdaterStatus.DOWNLOADING_UPDATES
@@ -125,7 +125,7 @@ def do_download(progress, status):
     _cache_pip_packages(progress)
     _cache_deb_packages(progress)
 
-    progress.finish('Done downloading')
+    progress.finish(_('Done downloading'))
     # TODO: Figure out if it has actually worked
     return True
 
